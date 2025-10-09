@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Tarea2</string>
+
+
+    <string name="buscar_hint">Buscar alimentos...</string>
+
+
+    <string name="titulo_categorias">Categorías</string>
+    <string name="titulo_populares">Populares</string>
+
+
+    <string name="pizza">Pizza</string>
+    <string name="hamburguesas">Hamburguesas</string>
+    <string name="tacos">Tacos</string>
+    <string name="comida_china">Comida China</string>
+
+
+    <string name="pizza_pepperoni">Pizza Pepperoni</string>
+    <string name="desc_pizza_pepperoni">Deliciosa pizza con pepperoni y queso</string>
+    <string name="hamburguesa_clasica">Hamburguesa Clásica</string>
+    <string name="desc_hamburguesa_clasica">Carne, lechuga, tomate y queso</string>
+
+
+    <string name="precio_100">$100.00</string>
+    <string name="precio_120">$120.00</string>
+
+
+    <string name="boton_ordenar">Ordenar</string>
+    <string name="ver_carrito">Ver Carrito</string>
+
+
+    <string name="titulo_tarjeta">Registro de Tarjeta de Crédito</string>
+    <string name="numero_tarjeta">Número de Tarjeta</string>
+    <string name="hint_numero_tarjeta">1234 5678 9012 3456</string>
+    <string name="fecha_expiracion">Fecha de Expiración</string>
+    <string name="hint_expiracion">MM/AA</string>
+    <string name="cvv">CVV</string>
+    <string name="hint_cvv">123</string>
+    <string name="nombre_titular">Nombre del Titular</string>
+    <string name="hint_nombre_titular">NOMBRE</string>
+    <string name="direccion">Dirección</string>
+    <string name="hint_direccion">Calle y número</string>
+    <string name="codigo_postal">Código Postal</string>
+    <string name="hint_codigo_postal">12345</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="hint_ciudad">Ciudad</string>
+    <string name="estado">Estado</string>
+    <string name="hint_estado">Estado</string>
+    <string name="pais">País</string>
+    <string name="hint_pais">País</string>
+    <string name="guardar_tarjeta">Guardar Tarjeta</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fondo_principal">#EFE7DA</color>
+    <color name="fondo_tarjetas">#E1DACA</color>
+    <color name="fondo_botones">#C1B6A4</color>
+    <color name="boton_oscuro">#8B7355</color>
+    <color name="fondo_imagenes">#D0C6B5</color>
+    <color name="texto_precio">#8B7355</color>
+    <color name="texto_titulo">#333333</color>
+</resources>
