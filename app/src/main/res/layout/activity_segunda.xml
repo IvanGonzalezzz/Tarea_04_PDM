@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fondo_principal"
+    android:fillViewport="true"
     android:padding="16dp">
 
     <LinearLayout
@@ -20,6 +21,32 @@
             android:gravity="center"
             android:layout_marginBottom="24dp"
             android:textColor="@color/texto_titulo" />
+
+
+        <TextView
+            android:id="@+id/tvProductoInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="@color/fondo_botones"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            android:layout_marginBottom="24dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Información de Pago"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@color/fondo_tarjetas"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
 
 
         <TextView
@@ -120,6 +147,24 @@
             android:maxLines="1"
             android:background="@drawable/edittext_background"
             android:padding="16dp"
+            android:layout_marginBottom="24dp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/fondo_botones"
+            android:layout_marginBottom="24dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_direccion"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@color/fondo_tarjetas"
+            android:padding="12dp"
             android:layout_marginBottom="16dp" />
 
 
@@ -136,7 +181,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/hint_direccion"
             android:inputType="textPostalAddress"
-            android:maxLines="1"
+            android:maxLines="2"
             android:background="@drawable/edittext_background"
             android:padding="16dp"
             android:layout_marginBottom="16dp" />
@@ -237,7 +282,6 @@
                     android:padding="16dp" />
 
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="0dp"

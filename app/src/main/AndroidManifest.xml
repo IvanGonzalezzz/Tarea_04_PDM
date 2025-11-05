@@ -6,6 +6,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
+        <activity android:name=".ConfirmacionActivity" />
         <activity android:name=".SegundaActivity" />
         <activity android:name=".MainActivity"
             android:exported="true">

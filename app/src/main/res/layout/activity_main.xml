@@ -1,299 +1,343 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/fondo_principal">
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:background="@color/fondo_tarjetas"
-        android:elevation="4dp">
-
-        <EditText
-            android:id="@+id/etBuscar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/buscar_hint"
-            android:padding="12dp"
-            android:background="@drawable/search_background"
-            android:drawableStart="@android:drawable/ic_menu_search" />
-
-    </LinearLayout>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/titulo_categorias"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:padding="16dp"
-        android:paddingBottom="8dp" />
+    android:background="@color/fondo_principal"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingHorizontal="16dp"
-        android:paddingBottom="16dp">
-
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:background="@color/fondo_tarjetas"
-            android:padding="16dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/pizza_icon"
-                android:scaleType="centerInside" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/pizza"
-                android:textStyle="bold"
-                android:layout_marginTop="8dp" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:background="@color/fondo_tarjetas"
-            android:padding="16dp"
-            android:layout_marginStart="8dp"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/hamburguesa_icon"
-                android:scaleType="centerInside" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hamburguesas"
-                android:textStyle="bold"
-                android:layout_marginTop="8dp" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingHorizontal="16dp"
-        android:paddingBottom="16dp">
-
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:background="@color/fondo_tarjetas"
-            android:padding="16dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/taco_icon"
-                android:scaleType="centerInside" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tacos"
-                android:textStyle="bold"
-                android:layout_marginTop="8dp" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:background="@color/fondo_tarjetas"
-            android:padding="16dp"
-            android:layout_marginStart="8dp"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/comida_china_icon"
-                android:scaleType="centerInside" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/comida_china"
-                android:textStyle="bold"
-                android:layout_marginTop="8dp" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/titulo_populares"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:padding="16dp"
-        android:paddingBottom="8dp" />
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingHorizontal="16dp">
+        android:orientation="vertical">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@color/fondo_tarjetas"
             android:padding="16dp"
-            android:layout_marginBottom="8dp">
+            android:background="@color/fondo_tarjetas"
+            android:elevation="4dp">
 
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/pizza_icon"
-                android:scaleType="centerInside"
-                android:background="@color/fondo_imagenes" />
-
-            <LinearLayout
+            <EditText
+                android:id="@+id/etBuscar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingStart="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pizza_pepperoni"
-                    android:textStyle="bold"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/desc_pizza_pepperoni"
-                    android:textSize="12sp"
-                    android:layout_marginTop="4dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/precio_100"
-                    android:textStyle="bold"
-                    android:textColor="@color/texto_precio"
-                    android:layout_marginTop="8dp" />
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/btnOrdenar1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/boton_ordenar"
-                android:backgroundTint="@color/fondo_botones"
-                android:textColor="@android:color/white" />
+                android:hint="@string/buscar_hint"
+                android:padding="12dp"
+                android:background="@drawable/search_background"
+                android:drawableStart="@android:drawable/ic_menu_search" />
 
         </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_populares"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:paddingBottom="8dp" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/fondo_tarjetas"
-            android:padding="16dp"
-            android:layout_marginBottom="8dp">
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
 
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/hamburguesa_icon"
-                android:scaleType="centerInside"
-                android:background="@color/fondo_imagenes" />
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingStart="16dp">
+                android:orientation="horizontal"
+                android:background="@color/fondo_tarjetas"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp">
 
-                <TextView
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/pizza_icon"
+                    android:scaleType="centerInside"
+                    android:background="@color/fondo_imagenes"
+                    android:contentDescription="@null" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pizza_pepperoni"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_pizza_pepperoni"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/precio_249"
+                        android:textStyle="bold"
+                        android:textColor="@color/texto_precio"
+                        android:layout_marginTop="8dp" />
+
+
+                    <TextView
+                        android:id="@+id/tvCantidadPizza"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cantidad: 0"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/boton_oscuro"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnOrdenar1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/hamburguesa_clasica"
-                    android:textStyle="bold"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/desc_hamburguesa_clasica"
-                    android:textSize="12sp"
-                    android:layout_marginTop="4dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/precio_120"
-                    android:textStyle="bold"
-                    android:textColor="@color/texto_precio"
-                    android:layout_marginTop="8dp" />
+                    android:text="@string/boton_ordenar"
+                    android:backgroundTint="@color/fondo_botones"
+                    android:textColor="@android:color/white" />
 
             </LinearLayout>
 
-            <Button
-                android:id="@+id/btnOrdenar2"
-                android:layout_width="wrap_content"
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/boton_ordenar"
-                android:backgroundTint="@color/fondo_botones"
-                android:textColor="@android:color/white" />
+                android:orientation="horizontal"
+                android:background="@color/fondo_tarjetas"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/hamburguesa_icon"
+                    android:scaleType="centerInside"
+                    android:background="@color/fondo_imagenes"
+                    android:contentDescription="@null" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hamburguesa_clasica"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_hamburguesa_clasica"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/precio_169"
+                        android:textStyle="bold"
+                        android:textColor="@color/texto_precio"
+                        android:layout_marginTop="8dp" />
+
+
+                    <TextView
+                        android:id="@+id/tvCantidadHamburguesa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cantidad: 0"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/boton_oscuro"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnOrdenar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boton_ordenar"
+                    android:backgroundTint="@color/fondo_botones"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/fondo_tarjetas"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/taco_icon"
+                    android:scaleType="centerInside"
+                    android:background="@color/fondo_imagenes"
+                    android:contentDescription="@null" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tacos_carne"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_tacos_carne"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/precio_139"
+                        android:textStyle="bold"
+                        android:textColor="@color/texto_precio"
+                        android:layout_marginTop="8dp" />
+
+
+                    <TextView
+                        android:id="@+id/tvCantidadTacos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cantidad: 0"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/boton_oscuro"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnOrdenar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boton_ordenar"
+                    android:backgroundTint="@color/fondo_botones"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/fondo_tarjetas"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/comida_china_icon"
+                    android:scaleType="centerInside"
+                    android:background="@color/fondo_imagenes"
+                    android:contentDescription="@null" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/comida_china"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/desc_comida_china"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/precio_199"
+                        android:textStyle="bold"
+                        android:textColor="@color/texto_precio"
+                        android:layout_marginTop="8dp" />
+
+
+                    <TextView
+                        android:id="@+id/tvCantidadChina"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cantidad: 0"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/boton_oscuro"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnOrdenar4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boton_ordenar"
+                    android:backgroundTint="@color/fondo_botones"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
+
+        <Button
+            android:id="@+id/btnIr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ver_carrito"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/fondo_botones"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:padding="12dp" />
+
     </LinearLayout>
 
-
-    <Button
-        android:id="@+id/btnIr"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/ver_carrito"
-        android:layout_margin="16dp"
-        android:backgroundTint="@color/fondo_botones"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        android:padding="12dp" />
-
-</LinearLayout>
+</ScrollView>

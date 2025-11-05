@@ -1,35 +1,31 @@
 <resources>
     <string name="app_name">Tarea2</string>
 
-
     <string name="buscar_hint">Buscar alimentos...</string>
 
 
-    <string name="titulo_categorias">Categorías</string>
-    <string name="titulo_populares">Populares</string>
-
-
-    <string name="pizza">Pizza</string>
-    <string name="hamburguesas">Hamburguesas</string>
-    <string name="tacos">Tacos</string>
-    <string name="comida_china">Comida China</string>
-
+    <string name="titulo_populares">Productos Populares</string>
 
     <string name="pizza_pepperoni">Pizza Pepperoni</string>
     <string name="desc_pizza_pepperoni">Deliciosa pizza con pepperoni y queso</string>
     <string name="hamburguesa_clasica">Hamburguesa Clásica</string>
     <string name="desc_hamburguesa_clasica">Carne, lechuga, tomate y queso</string>
+    <string name="tacos_carne">Tacos de Carne</string>
+    <string name="desc_tacos_carne">Tacos de carne con cebolla y cilantro</string>
+    <string name="comida_china">Comida China</string>
+    <string name="desc_comida_china">Deliciosa comida china con pollo agridulce y arroz</string>
 
-
-    <string name="precio_100">$100.00</string>
-    <string name="precio_120">$120.00</string>
-
+    <string name="precio_249">$249 MXN</string>
+    <string name="precio_169">$169 MXN</string>
+    <string name="precio_139">$139 MXN</string>
+    <string name="precio_199">$199 MXN</string>
 
     <string name="boton_ordenar">Ordenar</string>
     <string name="ver_carrito">Ver Carrito</string>
 
 
-    <string name="titulo_tarjeta">Registro de Tarjeta de Crédito</string>
+    <string name="titulo_tarjeta">Información de Pago</string>
+    <string name="titulo_direccion">Dirección de Envío</string>
     <string name="numero_tarjeta">Número de Tarjeta</string>
     <string name="hint_numero_tarjeta">1234 5678 9012 3456</string>
     <string name="fecha_expiracion">Fecha de Expiración</string>
@@ -37,9 +33,9 @@
     <string name="cvv">CVV</string>
     <string name="hint_cvv">123</string>
     <string name="nombre_titular">Nombre del Titular</string>
-    <string name="hint_nombre_titular">NOMBRE</string>
-    <string name="direccion">Dirección</string>
-    <string name="hint_direccion">Calle y número</string>
+    <string name="hint_nombre_titular">JUAN PEREZ</string>
+    <string name="direccion">Dirección Completa</string>
+    <string name="hint_direccion">Calle, número, colonia</string>
     <string name="codigo_postal">Código Postal</string>
     <string name="hint_codigo_postal">12345</string>
     <string name="ciudad">Ciudad</string>
@@ -47,6 +43,26 @@
     <string name="estado">Estado</string>
     <string name="hint_estado">Estado</string>
     <string name="pais">País</string>
-    <string name="hint_pais">País</string>
-    <string name="guardar_tarjeta">Guardar Tarjeta</string>
+    <string name="hint_pais">México</string>
+    <string name="guardar_tarjeta">Continuar con el Pago</string>
+
+
+    <string name="carrito_vacio">Carrito vacío</string>
+    <string name="total">Total: $%s MXN</string>
+    <string name="resumen_pedido">Resumen del Pedido</string>
+    <string name="confirmar_pedido">Confirmar Pedido</string>
+    <string name="pedido_confirmado">¡Pedido Confirmado!</string>
+    <string name="gracias_por_comprar">Gracias por tu compra, %s</string>
+    <string name="direccion_entrega">Dirección de Entrega</string>
+
+
+    <string name="error_numero_tarjeta">Ingresa el número de tarjeta</string>
+    <string name="error_expiracion">Ingresa la fecha de expiración</string>
+    <string name="error_cvv">Ingresa el CVV</string>
+    <string name="error_nombre_titular">Ingresa el nombre del titular</string>
+    <string name="error_direccion">Ingresa la dirección de entrega</string>
+    <string name="error_codigo_postal">Ingresa el código postal</string>
+    <string name="error_ciudad">Ingresa la ciudad</string>
+    <string name="error_estado">Ingresa el estado</string>
+    <string name="error_pais">Ingresa el país</string>
 </resources>
