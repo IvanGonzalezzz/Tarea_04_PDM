@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/casa"
+            android:title="Inicio" />
+
+
+        <item
+            android:id="@+id/nav_my_orders"
+            android:icon="@drawable/pedidos"
+            android:title="Mis Pedidos" />
+
+
+        <item
+            android:id="@+id/nav_favorites"
+            android:icon="@drawable/favoritos"
+            android:title="Favoritos" />
+    </group>
+
+    <item android:title="Configuración">
+        <menu>
+
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/perfil"
+                android:title="Mi Perfil" />
+
+
+            <item
+                android:id="@+id/nav_addresses"
+                android:icon="@drawable/direccion"
+                android:title="Mis Direcciones" />
+
+
+            <item
+                android:id="@+id/nav_payment"
+                android:icon="@drawable/pago"
+                android:title="Métodos de Pago" />
+        </menu>
+    </item>
+
+    <item android:title="Soporte">
+        <menu>
+
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ayuda"
+                android:title="Centro de Ayuda" />
+
+
+            <item
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/contacto"
+                android:title="Contáctanos" />
+        </menu>
+    </item>
+
+</menu>

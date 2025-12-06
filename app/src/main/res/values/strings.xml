@@ -65,4 +65,7 @@
     <string name="error_ciudad">Ingresa la ciudad</string>
     <string name="error_estado">Ingresa el estado</string>
     <string name="error_pais">Ingresa el país</string>
+
+    <string name="navigation_drawer_open">Abrir menú</string>
+    <string name="navigation_drawer_close">Cerrar menú</string>
 </resources>

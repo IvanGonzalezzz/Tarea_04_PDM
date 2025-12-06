@@ -23,16 +23,15 @@ public class ConfirmacionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmacion);
 
-        // Inicializar precios
+
         inicializarPrecios();
 
-        // Inicializar vistas
+
         initViews();
 
-        // Recibir datos
+
         recibirDatos();
 
-        // Mostrar resumen
         mostrarResumenCompleto();
 
         btnConfirmarPedido.setOnClickListener(v -> confirmarPedido());

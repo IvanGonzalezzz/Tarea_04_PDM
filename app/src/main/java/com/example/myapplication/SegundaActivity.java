@@ -3,11 +3,16 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.myapplication.database.Pedido;
+import com.example.myapplication.database.PedidoViewModel;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,18 +26,21 @@ public class SegundaActivity extends AppCompatActivity {
     private Map<String, Integer> carrito = new HashMap<>();
     private Map<String, Double> precios = new HashMap<>();
 
+    private PedidoViewModel pedidoViewModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segunda);
 
-        // Inicializar precios
+
+        pedidoViewModel = new PedidoViewModel(getApplication());
+
+
         inicializarPrecios();
 
-        // Inicializar vistas
         initViews();
 
-        // Recibir datos del Intent
         recibirDatos();
 
         btnSaveCard.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +51,8 @@ public class SegundaActivity extends AppCompatActivity {
                 }
             }
         });
+
+        Log.d("FOOD_EXPRESS", "SegundaActivity iniciada - Pantalla de pago");
     }
 
     private void inicializarPrecios() {
@@ -77,6 +87,8 @@ public class SegundaActivity extends AppCompatActivity {
                 }
             }
             mostrarResumenCarrito();
+
+            Log.d("FOOD_EXPRESS", "Carrito recibido con " + carrito.size() + " productos");
         }
     }
 
@@ -94,7 +106,7 @@ public class SegundaActivity extends AppCompatActivity {
             resumen.append(String.format("• %s x%d - $%.2f\n", producto, cantidad, subtotal));
         }
 
-        resumen.append(String.format("\nTotal: $%.2f", total));
+        resumen.append(String.format("\nTotal: $%.2f MXN", total));
         tvProductoInfo.setText(resumen.toString());
         tvProductoInfo.setVisibility(View.VISIBLE);
     }
@@ -151,19 +163,20 @@ public class SegundaActivity extends AppCompatActivity {
 
     private void mostrarError(String mensaje) {
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
+        Log.w("FOOD_EXPRESS", "Error de validación: " + mensaje);
     }
 
     private void procesarPago() {
-
         String nombreTitular = etCardholderName.getText().toString();
         String direccion = etAddress.getText().toString();
         String ciudad = etCity.getText().toString();
         String estado = etState.getText().toString();
         String pais = etCountry.getText().toString();
-
+        String codigoPostal = etPostalCode.getText().toString();
 
         double total = calcularTotal();
 
+        guardarPedidoEnBD(nombreTitular, direccion, ciudad, estado, pais, codigoPostal, total);
 
         Intent intent = new Intent(SegundaActivity.this, ConfirmacionActivity.class);
         intent.putExtra("NOMBRE_CLIENTE", nombreTitular);
@@ -171,8 +184,8 @@ public class SegundaActivity extends AppCompatActivity {
         intent.putExtra("CIUDAD", ciudad);
         intent.putExtra("ESTADO", estado);
         intent.putExtra("PAIS", pais);
+        intent.putExtra("CODIGO_POSTAL", codigoPostal);
         intent.putExtra("TOTAL", total);
-
 
         Bundle carritoBundle = new Bundle();
         for (Map.Entry<String, Integer> entry : carrito.entrySet()) {
@@ -181,6 +194,8 @@ public class SegundaActivity extends AppCompatActivity {
         intent.putExtra("CARRITO", carritoBundle);
 
         startActivity(intent);
+
+        Log.i("FOOD_EXPRESS", "Pago procesado para: " + nombreTitular + ", Total: $" + total);
     }
 
     private double calcularTotal() {
@@ -189,5 +204,24 @@ public class SegundaActivity extends AppCompatActivity {
             total += precios.get(entry.getKey()) * entry.getValue();
         }
         return total;
+    }
+
+    private void guardarPedidoEnBD(String nombreCliente, String direccion, String ciudad,
+                                   String estado, String pais, String codigoPostal, double total) {
+        Pedido pedido = new Pedido();
+        pedido.setClienteNombre(nombreCliente);
+        pedido.setDireccion(direccion);
+        pedido.setCiudad(ciudad);
+        pedido.setEstado(estado);
+        pedido.setPais(pais);
+        pedido.setCodigoPostal(codigoPostal);
+        pedido.setTotal(total);
+        pedido.setProductos(new HashMap<>(carrito));
+        pedido.setEstadoPedido("CONFIRMADO");
+
+        pedidoViewModel.insert(pedido);
+
+        Log.i("FOOD_EXPRESS", "Pedido guardado en SharedPreferences para: " + nombreCliente);
+        Log.i("FOOD_EXPRESS", "Total pedidos guardados: " + pedidoViewModel.getTotalPedidos());
     }
 }

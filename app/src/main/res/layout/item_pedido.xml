@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/fondo_tarjetas">
+
+
+        <TextView
+            android:id="@+id/tvPedidoId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pedido #001"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/boton_oscuro"
+            android:layout_marginBottom="8dp" />
+
+
+        <TextView
+            android:id="@+id/tvCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cliente: Juan Pérez"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+
+        <TextView
+            android:id="@+id/tvDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dirección: Calle Principal 123"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total: $249.00 MXN"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+
+        <TextView
+            android:id="@+id/tvEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estado: CONFIRMADO"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_green_dark"
+            android:layout_marginBottom="4dp" />
+
+
+        <TextView
+            android:id="@+id/tvFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha: 01/12/2023 14:30"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="8dp" />
+
+
+        <TextView
+            android:id="@+id/tvProductos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Productos:\n• Pizza Pepperoni x1"
+            android:textSize="12sp"
+            android:background="@color/fondo_imagenes"
+            android:padding="8dp"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
